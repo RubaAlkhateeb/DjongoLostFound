@@ -42,7 +42,7 @@
   ============================-->
   <header id="header">
 
-    <div id="topbar">
+    <!-- <div id="topbar">
       <div class="container">
         <div class="social-links">
           <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
@@ -51,7 +51,7 @@
           <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <div class="container">
 
@@ -63,10 +63,10 @@
 
       <nav class="main-nav float-right d-none d-lg-block">
         <ul>
-          <li class="active"><a href="#intro">Home</a></li>
-          <li><a href="Add.html">About Us</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
+          <li class="active"><a href="{% url 'index' %}">Home</a></li>
+          <li><a href="#services">lost item</a></li>
+          <li><a href="{% url 'Add' %}">Find Somathing?</a></li>
+          <!-- <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#team">Team</a></li>
           <li class="drop-down"><a href="">Drop Down</a>
             <ul>
@@ -85,7 +85,7 @@
               <li><a href="#">Drop Down 5</a></li>
             </ul>
           </li>
-          <li><a href="#footer">Contact Us</a></li>
+          <li><a href="#footer">Contact Us</a></li> -->
         </ul>
       </nav><!-- .main-nav -->
       
@@ -114,6 +114,31 @@
   </section><!-- #intro -->
 
   <main id="main">
+
+    <!----------View all item---------->
+    <section id="about">
+
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-7 col-md-6">
+            <div class="about-content">
+              <h2>All item</h2>
+              <ul>
+              {% for post in object_list %}
+                <li><a href="{% url 'viewitem' post.pk %}">{{ post.name }}</a><br/>
+                {{ post.auther }}<br/>
+                {{ post.body }}</li>
+
+              {% endfor %}
+            </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <!----------View all item---------->
 
     <!--==========================
       About Us Section
