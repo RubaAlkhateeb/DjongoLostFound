@@ -130,17 +130,9 @@
 
         <div class="row">
 
-            {% for post in object_list %}
-
-            <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s"><a style="color: #2885f0;" href="{% url 'ItemDetail' post.pk %}">
-                <div class="box">
-                  <div class="" ><img src="{% static 'website/img/toy.jpg'%}"></div>
-                  <h4 class="title">{{ post.name }}</h4>
-                  <p class="description">{{ post.body }}</p>
-                </div></a>
-              </div>
-
-            {% endfor %}
+            <p>{{ post.name }}</p><br/>
+            <p>{{ post.auther }}</p><br/>
+            <p>{{ post.body }}</p>
 
           <!-- <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
             <div class="box">
