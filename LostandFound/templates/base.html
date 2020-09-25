@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Rapid Bootstrap Template</title>
+  <title>{% block title %}Find Me{% endblock %}</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -57,35 +57,15 @@
 
       <div class="logo float-left">
         <!-- Uncomment below if you prefer to use an image logo -->
-        <h1 class="text-light"><a href="#intro" class="scrollto"><span>Rapid</span></a></h1>
+        <h1 class="text-light"><a href="#intro" class="scrollto"><span>Find ME</span></a></h1>
         <!-- <a href="#header" class="scrollto"><img src="img/logo.png" alt="" class="img-fluid"></a> -->
       </div>
 
       <nav class="main-nav float-right d-none d-lg-block">
         <ul>
-          <li class="active"><a href="{% url 'index' %}">Home</a></li>
+          <li><a href="{% url 'index' %}">Home</a></li>
           <li><a href="{% url 'viewitem' %}">lost item</a></li>
           <li><a href="{% url 'Add' %}">Found Somathing?</a></li>
-          <!-- <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#team">Team</a></li>
-          <li class="drop-down"><a href="">Drop Down</a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="drop-down"><a href="#">Drop Down 2</a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-              <li><a href="#">Drop Down 5</a></li>
-            </ul>
-          </li>
-          <li><a href="#footer">Contact Us</a></li> -->
         </ul>
       </nav><!-- .main-nav -->
       
@@ -120,6 +100,10 @@
         -->
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
+      <div class="credits">
+        Designed by <a href="https://stories.freepik.com/travel">Illustration by Freepik Stories</a>
+      </div>
+      
     </div>
   </footer><!-- #footer -->
 

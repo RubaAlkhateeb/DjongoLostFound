@@ -1,11 +1,13 @@
 {% extends 'base.html' %}
 {% load static %}
+{% block title %}Found Something?{% endblock %}
 {% block content %}
 
 <div style="height: 80px;"></div>
 
 <section id='portfolio' class="wow fadeInUp section-bg">
-    <div style="margin-left: 30%; margin-right: 30%;" >
+    <h4 style="text-align: center; margin: 0 25%; color:#413e66;"><strong> Find something and You Don't Know for how?</strong><small></small> Fill The Form Below So We Can Help You To Find The Owner </h4><br/>
+    <div style="margin-left: 30%; margin-right: 30%; font-weight: bold; color:#413e66;" >
         <div class="form-group">
             <form method="POST" enctype="multipart/form-data">
                 {% csrf_token %}

@@ -1,34 +1,90 @@
 {% extends 'base.html' %}
 {% load static %}
+{% block title %}{{ post.Item_Name }}{% endblock %}
 {% block content %}
 <div style="height: 80px;"></div>
 <main id="main">
+    <section id="services" class="section-bg">
+
+    <!-- Page Content -->
+        <div class="container" style="color:#413e66;">
+
+            <!-- Portfolio Item Heading -->
+            <h1 class="my-4" style="text-align: center;">{{ post.Item_Name }}</h1>
+        
+            <!-- Portfolio Item Row -->
+            <div class="row">
+        
+            <!-- <div class="col-md-8"> -->
+                <div class="polaroid" style="width: 300px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                text-align: center;">
+                    {% if post.Image %}
+                        <img src="{{ post.Image.url }}" style="width:100%">
+                        {% else %}
+                            <img class="img-fluid" src="http://placehold.it/750x500" alt="" style="width:100%">
+                    {% endif %}
+                    <div class="container" style="padding: 10px; text-transform:capitalize;">
+                    <p>{{ post.Item_Name }}</p>
+                    </div>
+                </div>
+        
+            <div class="col-md-4">
+                <h3 class="my-3">Description</h3>
+                <p>{{ post.Description }}</p>
+                <h3 class="my-3">Founder</h3>
+                <p>{{ post.Founder }}</p>
+                <h3 class="my-3">Date</h3>
+                <p>{{ post.Date }}</p>
+                <h3>Contect Information</h3>
+                <p>{{ post.Contect_Information }}</p>
+            </div>
+        
+            </div>
+            <!-- /.row -->
+            <br/><br/>
+
+            <div style="display: flex; justify-content: center;">
+                <button class='btn btn-danger'><a href="{% url 'DeleteItem' post.pk %}" style="color:white;">Delete</a></button>
+            </div>
+    </div>
+  <!-- /.container -->
+    </section>
+  
     <!--==========================
       Services Section
     ============================-->
-    <section id="services" class="section-bg">
+    <!-- <section id="services" class="section-bg">
       <div class="container">
 
         <header class="section-header">
-          <h3>Services</h3>
+          <h3>{{ post.Item_Name }}</h3>
           <p>Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo abhorreant vituperatoribus.</p>
         </header>
 
         <div class="row">
-
-            <p>{{ post.Item_Name }}</p><br/>
-            <p>{{ post.Founder }}</p><br/>
-            <p>{{ post.Description }}</p><br/>
-
             {% if post.Image %}
                 <img src="{{ post.Image.url }}">
             {% endif %}
 
         </div>
+
+        <div class="row">
+            <p>{{ post.Founder }}</p><br/>
+
+        </div>
+
+        <div class="row">
+            <p>{{ post.Description }}</p><br/>
+
+        </div>
+
+
+
         <br/><br/>
         <button class='btn btn-danger'><a href="{% url 'DeleteItem' post.pk %}" style="color:white;">Delete</a></button>
       </div>
-    </section> 
+    </section>  -->
     <!-- #services-->
 
   </main>

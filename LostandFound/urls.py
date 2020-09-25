@@ -8,6 +8,6 @@ urlpatterns = [
     path('', IndexView.as_view(), name="index"),
     path('Add/', AddView.as_view(), name='Add'),
     path('viewitem/', ItemView.as_view(), name='viewitem'),
-    path('ItemDetail/<int:pk>', ItemDetail.as_view(), name='ItemDetail'),
-    path('ItemDetail/<int:pk>/DeleteItem', DeleteItem.as_view(), name='DeleteItem'),
+    path('ItemDetail/(?P<pk>[\w\d\-\_]+)/$', ItemDetail.as_view(), name='ItemDetail'),
+    path('ItemDetail/(?P<pk>[\w\d\-\_]+)/$/DeleteItem', DeleteItem.as_view(), name='DeleteItem'),
 ]

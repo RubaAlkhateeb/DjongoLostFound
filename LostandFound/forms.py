@@ -16,7 +16,7 @@ class PostForm(forms.ModelForm):
         ]
 
         widgets = {
-            'Item_Name': forms.TextInput(attrs={'class':'form-control', 'id': 'InputField'}),
+            'Item_Name': forms.TextInput(attrs={'class':'form-control'}),
             'Founder': forms.TextInput(attrs={'class':'form-control'}),
             'Contect_Information': forms.TextInput(attrs={'class':'form-control'}),
             'Date': forms.DateInput(attrs={'class':'form-control', 'type': 'date'}),

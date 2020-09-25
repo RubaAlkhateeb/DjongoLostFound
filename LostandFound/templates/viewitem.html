@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% block title %}Lost Item{% endblock %}
 {% block content %}
 
 <div style="height: 80px;"></div>
@@ -14,8 +15,8 @@
       <div class="container">
 
         <header class="section-header">
-          <h3>Services</h3>
-          <p>Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo abhorreant vituperatoribus.</p>
+          <h3>Lost Item</h3>
+          <p style="text-transform: capitalize;">Did you lost something? try to find it here maybe you can find it!</p>
         </header>
 
         <div class="row">
@@ -34,7 +35,7 @@
                     </div>
                     <br/>
                   <h4 class="title" style = "text-transform:capitalize;">{{ post.Item_Name }}</h4>
-                  <p class="description" style = "text-transform:capitalize;">{{ post.Description|slice:":50" }}</p>
+                  <p class="description" style = "text-transform:capitalize;">{{ post.Description|slice:":70" }}</p>
                 </div></a>
               </div>
 
