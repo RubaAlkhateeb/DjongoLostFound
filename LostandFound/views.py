@@ -1,9 +1,10 @@
 from django.shortcuts import render
 from django.template import loader
 from django.http import HttpResponse
-from django.views.generic import ListView, DetailView, CreateView
+from django.views.generic import ListView, DetailView, CreateView, DeleteView
 from .models import Post
 from .forms import PostForm
+from django.urls import reverse_lazy
 
 # def index(request):
 #     #template = loader.get_template('LostandFound/index.html')
@@ -34,7 +35,13 @@ class AddView(CreateView):
 class ItemView(ListView):
     model = Post
     template_name = 'viewitem.html'
+    ordering = ['-id']
 
 class ItemDetail(DetailView):
     model = Post
     template_name = 'ItemDetail.html'
+
+class DeleteItem(DeleteView):
+    model = Post
+    template_name = 'DeleteItem.html'
+    success_url = reverse_lazy('viewitem')

@@ -22,11 +22,19 @@
 
             {% for post in object_list %}
 
-            <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s"><a style="color: #000000;" href="{% url 'ItemDetail' post.pk %}">
+            <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s"><a style="color: #413e66;" href="{% url 'ItemDetail' post.pk %}">
                 <div class="box">
-                  <div class="" ><img src="{% static 'website/img/toy.jpg'%}"></div>
-                  <h4 class="title">{{ post.Item_Name }}</h4>
-                  <p class="description">{{ post.Description }}</p>
+                  <div class="" >
+                    {% if post.Image %}
+                        <img style="width: 200px; height: 200px; border-radius: 10%;" src="{{ post.Image.url }}">
+                        {% else %}
+                        <img style="width: 200px; height: 200px; border-radius: 10%;" src="{% static 'website/img/toy.jpg'%}">
+                    {% endif %}
+                      
+                    </div>
+                    <br/>
+                  <h4 class="title" style = "text-transform:capitalize;">{{ post.Item_Name }}</h4>
+                  <p class="description" style = "text-transform:capitalize;">{{ post.Description|slice:":50" }}</p>
                 </div></a>
               </div>
 

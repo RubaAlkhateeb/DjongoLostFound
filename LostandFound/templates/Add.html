@@ -5,52 +5,14 @@
 <div style="height: 80px;"></div>
 
 <section id='portfolio' class="wow fadeInUp section-bg">
-    <div style="margin-left: 30px;" >
+    <div style="margin-left: 30%; margin-right: 30%;" >
         <div class="form-group">
-            <form method="POST">
+            <form method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form.as_p}}
-                <input  class="btn btn-info" type="submit" value="Submit">
-                <!-- <button class="btn btn-info">Post</button> -->
+                <div style="text-align: center;"><input  class="btn btn-info" type="submit" value="Submit"></div>
             </form>
         </div>
-        <!-- <div class="container" >
-            <p>How to make these input fields small and retain the layout.</p>
-            
-            <form role="form">
-                <div class="row">
-                    <div class="md-form form-group w-50">
-                        <label for="code">Name</label>
-                        <input type="text" class="form-control" />
-                    </div>
-                </div>
-        
-                <div class="row">
-                    <div class="md-form form-group w-50">
-                        <label for="code">Email</label>
-                        <input type="text" class="form-control input-normal" />
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="md-form form-group w-50">
-                        <label for="code">Email</label>
-                        <input type="text" class="form-control input-normal" />
-                    </div>
-                </div>
-                
-                <div class="row">
-                    <div class="md-form form-group w-50">
-                        <label for="exampleFormControlTextarea2">Small textarea</label>
-                        <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3"></textarea>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <button type="submit" class="btn btn-info">Submit</button>
-                </div>
-            </form>
-        </div> -->
     </div>
 </section>
 

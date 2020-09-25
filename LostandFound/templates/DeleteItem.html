@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div style="height: 80px;"></div>
+
+<section id='portfolio' class="wow fadeInUp section-bg" >
+    <div style="margin-left: 30px;" >
+        <h2 style="margin: 0 auto; text-align: center;text-transform:capitalize;">Delete: {{ post.Item_Name }} By {{ post.Founder }}</h2><br/>
+        <div class="form-group" >
+            <form method="POST">
+                {% csrf_token %}
+                <p style="text-align: center;"><strong >Are you sure?</strong></p>
+                <div style="display: flex; justify-content: center;"><input class='btn btn-danger' type="submit" value="Delete" ></div>
+            </form>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
